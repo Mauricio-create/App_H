@@ -25,7 +25,7 @@ struct RegisterEmailView: View {
                     Divider().frame(width: 315, height: 4).overlay(.white)
                     TextField("Email", text:$textFieldEmail)
                     Divider().frame(width: 315, height: 4).overlay(.white)
-                    TextField("Contraseña", text:$textFieldPassword)
+                    SecureField("Contraseña", text:$textFieldPassword)
                     Divider().frame(width: 315, height: 4).overlay(.white)
                 }.padding()
             }.frame(width: 350, height: 170).padding(.bottom,30)
