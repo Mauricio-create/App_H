@@ -43,7 +43,7 @@ struct AuthenticationView: View {
                 } label: {
                     Text("¿No tienes cuenta?")
                     Text("Regístrate")
-                        .underline()
+                        .underline().foregroundColor(.blue)
                 }
                 .tint(.black)
             }
