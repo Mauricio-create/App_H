@@ -14,7 +14,12 @@ final class AuthenticationViewModel: ObservableObject {
     
     init(authenticationRepository: AuthenticationRepository = AuthenticationRepository()) {
         self.authenticationRepository = authenticationRepository
+        getCurrentUser()
     }
+    
+    func getCurrentUser() {
+            self.user = authenticationRepository.getCurrentUser()
+        }
     
     func createNewUser(email: String, password: String) {
         authenticationRepository.createNewUser(email: email, password: password) { [weak self] result in
