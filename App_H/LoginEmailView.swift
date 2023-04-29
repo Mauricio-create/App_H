@@ -1,55 +1,32 @@
-//
-//  LoginEmailView.swift
-//  App_H
-//
-//  Created by Adrián Reyes on 29/04/23.
-//
 import SwiftUI
 
 struct LoginEmailView: View {
-    @State var textFieldEmail: String = ""
-    @State var textFieldPassword: String = ""
+    
+    @State var TextFielEmail: String = ""
+    @State var SecureFieldContraseña: String = ""
     
     var body: some View {
         VStack {
-            DismissView()
-                .padding(.top, 8)
-            Group {
-                Text("👋 Bienvenido de nuevo a")
-                Text("SwiftBeta")
-                    .bold()
-                    .underline()
-            }
-            .padding(.horizontal, 8)
-            .multilineTextAlignment(.center)
-            .font(.largeTitle)
-            .tint(.primary)
-            Group {
-                Text("Loguéate de nuevo para poder acceder a todos tus links.")
-                    .tint(.secondary)
-                    .multilineTextAlignment(.center)
-                    .padding(.top, 2)
-                    .padding(.bottom, 32)
-                TextField("Añade tu correo electrónico", text: $textFieldEmail)
-                TextField("Añade tu contraseña", text: $textFieldPassword)
-                Button("Login") {
-                    print("Login")
-                }
-                .padding(.top, 18)
-                .buttonStyle(.bordered)
-                .tint(.blue)
-            }
-            .textFieldStyle(.roundedBorder)
-            .padding(.horizontal, 64)
-            Spacer()
+            Text("App").font(.title).bold().padding().padding(.bottom,30)
+            ZStack{
+                Color.gray.opacity(0.3)
+                VStack{
+                    TextField("Email", text:$TextFielEmail)
+                    Divider().frame(width: 315, height: 4).overlay(.white)
+                    TextField("Contraseña", text:$SecureFieldContraseña)
+                    Divider().frame(width: 315, height: 4).overlay(.white)
+                }.padding()
+            }.frame(width: 350, height: 110).padding(.bottom,30)
+            
+            Button("Entrar"){
+            }.frame(width: 300, height: 60).background(.black).foregroundColor(.white).cornerRadius(30)
         }
+
     }
 }
 
-struct LoginEmailView_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         LoginEmailView()
     }
 }
-
-
