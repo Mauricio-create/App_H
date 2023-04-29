@@ -1,4 +1,5 @@
 import SwiftUI
+import MapKit
 
 struct MapView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
@@ -26,24 +27,12 @@ struct MapView: View {
                             .ignoresSafeArea()
                         VStack{
                             HStack{
-                                Text("Arriba los pumas")
+                                
                             }
                             Spacer()
                         }
                     }
                 }
-            }
-        }
-        struct MapWithUserLocation_Previews: PreviewProvider {
-            static var previews: some View {
-                MapWithUserLocation()
-            }
-        }
-        extension MKCoordinateRegion {
-            
-            static func DefaultRegion() -> MKCoordinateRegion {
-                MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 19.374063076088753, longitude: -99.18268744297909), latitudinalMeters: 500, longitudinalMeters: 500)
-            }
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Home")
@@ -55,20 +44,25 @@ struct MapView: View {
         }
     }
 }
+extension MKCoordinateRegion {
+    
+    static func DefaultRegion() -> MKCoordinateRegion {
+        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 19.374063076088753, longitude: -99.18268744297909), latitudinalMeters: 500, longitudinalMeters: 500)
+    }
+    func getBinding() -> Binding<MKCoordinateRegion>? {
+        return Binding<MKCoordinateRegion>(.constant(self))
+    }
+
+}
+
+    
+
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         MapView(authenticationViewModel: AuthenticationViewModel())
     }
 }
-extension MKCoordinateRegion {
-    
-    static func DefaultRegion() -> MKCoordinateRegion {
-        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 19.374063076088753, longitude: -99.18268744297909), latitudinalMeters: 500, longitudinalMeters: 500)
-    }
-    
-    func getBinding() -> Binding<MKCoordinateRegion>? {
-        return Binding<MKCoordinateRegion>(.constant(self))
-    }
-}
+
+
 
