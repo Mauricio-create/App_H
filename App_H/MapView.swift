@@ -1,18 +1,29 @@
 import SwiftUI
-import Foundation
 
 struct MapView: View {
+    @ObservedObject var authenticationViewModel: AuthenticationViewModel
     
     var body: some View {
-        VStack{
-            Text("Hola")
+        NavigationView {
+            VStack {
+                Text("Bienvenido \(authenticationViewModel.user?.email ?? "No user")")
+                    .padding(.top, 32)
+                Spacer()
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Home")
+            .toolbar {
+                Button("Logout") {
+                    authenticationViewModel.logout()
+                }
+            }
         }
     }
 }
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapView(authenticationViewModel: AuthenticationViewModel())
     }
 }
 

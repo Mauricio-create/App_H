@@ -53,7 +53,7 @@ struct AuthenticationView: View {
             case .register:
                 RegisterEmailView(authenticationViewModel: authenticationViewModel)
             case .login:
-                LoginEmailView()
+                LoginEmailView(authenticationViewModel: authenticationViewModel)
             }
         }
     }

@@ -27,9 +27,9 @@ struct App_HApp: App {
     @StateObject var authenticationViewModel = AuthenticationViewModel()
     var body: some Scene {
         WindowGroup {
-            if let user = authenticationViewModel.user {
+            if let _ = authenticationViewModel.user {
                             //Text("User logged! \(user.email)")
-                            MapView()
+                            MapView(authenticationViewModel: authenticationViewModel)
                         } else {
                             AuthenticationView(authenticationViewModel: authenticationViewModel)
                         }
