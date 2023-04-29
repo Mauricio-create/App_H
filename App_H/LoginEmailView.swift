@@ -7,8 +7,9 @@ struct LoginEmailView: View {
     @State var SecureFieldPassword: String = ""
     @State var showScreen:Bool = false
     var body: some View {
+        NavigationStack{
         VStack {
-            Text("App").font(.title).bold().padding().padding(.bottom,30)
+            Text("Free Place").font(.title).bold().padding().padding(.bottom,30)
             ZStack{
                 Color.gray.opacity(0.3)
                 VStack{
@@ -22,11 +23,9 @@ struct LoginEmailView: View {
             Button("Entrar"){
                 authenticationViewModel.login(email: TextFielEmail, password: SecureFieldPassword)
             }.frame(width: 300, height: 60).background(.black).foregroundColor(.white).cornerRadius(30)
-            Button("¿Olvidaste tu contraseña?"){
-               showScreen = true
-            }.foregroundColor(.red)
+            NavigationLink("¿Olvidaste tu contraseña?", destination: newPassView(), isActive: $showScreen).foregroundColor(.red)
+            }
         }
-        NavigationLink("",destination: newPassView(), isActive: $showScreen)
 
     }
 }
