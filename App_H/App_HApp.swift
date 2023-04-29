@@ -23,6 +23,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct App_HApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
             AuthenticationView()
