@@ -28,7 +28,7 @@ struct AuthenticationView: View {
                 Button(action: {
                     authenticationSheetView = .login
                 }, label: {
-                    Label("Entra con Email", systemImage: "envelope.fill")
+                    Label("Iniciar sesión", systemImage: "envelope.fill")
                 })
                 .tint(.black)
             }
