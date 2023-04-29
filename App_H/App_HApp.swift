@@ -24,9 +24,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct App_HApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var authenticationViewModel = AuthenticationViewModel()
     var body: some Scene {
         WindowGroup {
-            AuthenticationView()
+            if let user = authenticationViewModel.user {
+                            Text("User logged! \(user.email)")
+                        } else {
+                            AuthenticationView(authenticationViewModel: authenticationViewModel)
+                        }
         }
     }
 }
