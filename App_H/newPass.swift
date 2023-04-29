@@ -25,18 +25,13 @@ struct newPassView: View {
                 }.frame(width: 350, height: 110).padding(.bottom,30)
                 
                 Button("Cambiar"){
-                    if let user = Auth.auth().currentUser {
-                            let newPassword = SecureFieldContraseñaNueva
-                            user.updatePassword(to: newPassword) { error in
-                                if let error = error {
-                                    print("Error al actualizar la contraseña: \(error.localizedDescription)")
-                                } else {
-                                    print("Contraseña actualizada exitosamente.")
-                                }
-                            }
+                    Auth.auth().sendPasswordReset(withEmail: TextFielEmail) { error in
+                        if let error = error {
+                            print("Error al enviar correo electrónico de restablecimiento de contraseña: \(error.localizedDescription)")
                         } else {
-                            print("No hay usuario iniciado.")
+                            print("Correo electrónico de restablecimiento de contraseña enviado")
                         }
+                    }
                 }.frame(width: 300, height: 60).background(.black).foregroundColor(.white).cornerRadius(30)
             }
         }

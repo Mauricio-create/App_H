@@ -38,6 +38,8 @@ final class AuthenticationFirebaseDatasource {
         }
     }
     
+    
+    
     func login(email: String, password: String, completionBlock: @escaping (Result<User, Error>) -> Void) {
             Auth.auth().signIn(withEmail: email, password: password) { authDataResult, error in
                 if let error = error {
