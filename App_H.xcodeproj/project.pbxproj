@@ -26,6 +26,7 @@
 		8E3EC99E29FD8D200086FFBA /* AuthenticationFirebaseDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC99D29FD8D200086FFBA /* AuthenticationFirebaseDatasource.swift */; };
 		8E3EC9A029FD8E6D0086FFBA /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC99F29FD8E6D0086FFBA /* AuthenticationRepository.swift */; };
 		8E3EC9A229FD8ECC0086FFBA /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC9A129FD8ECB0086FFBA /* AuthenticationViewModel.swift */; };
+		FE51821A29FDA82F00EB99C2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51821929FDA82F00EB99C2 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		8E3EC99D29FD8D200086FFBA /* AuthenticationFirebaseDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFirebaseDatasource.swift; sourceTree = "<group>"; };
 		8E3EC99F29FD8E6D0086FFBA /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 		8E3EC9A129FD8ECB0086FFBA /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		FE51821929FDA82F00EB99C2 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				8E3EC9A129FD8ECB0086FFBA /* AuthenticationViewModel.swift */,
 				71FC103029FD99CD00DDF9C2 /* newPass.swift */,
 				71FC103229FD9E0D00DDF9C2 /* MapView.swift */,
+				FE51821929FDA82F00EB99C2 /* LocationManager.swift */,
 			);
 			path = App_H;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				8E3EC98929FD81860086FFBA /* RegisterEmailView.swift in Sources */,
 				8E3EC99E29FD8D200086FFBA /* AuthenticationFirebaseDatasource.swift in Sources */,
 				8E3EC98D29FD81CE0086FFBA /* DismissView.swift in Sources */,
+				FE51821A29FDA82F00EB99C2 /* LocationManager.swift in Sources */,
 				71FC103129FD99CD00DDF9C2 /* newPass.swift in Sources */,
 				71FC100729FD789100DDF9C2 /* AuthenticationView.swift in Sources */,
 				8E3EC9A229FD8ECC0086FFBA /* AuthenticationViewModel.swift in Sources */,
@@ -477,6 +481,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App_H/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Free Place necesita acceder a tu ubicación";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -505,6 +510,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App_H/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Free Place necesita acceder a tu ubicación";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

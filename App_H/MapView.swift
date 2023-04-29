@@ -2,6 +2,17 @@ import SwiftUI
 
 struct MapView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
+    @StateObject private var locationManager = LocationManager()
+    
+    var region: Binding<MKCoordinateRegion>? {
+        guard let location = locationManager.location else {
+            return MKCoordinateRegion.DefaultRegion().getBinding()
+        }
+        
+        let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
+        
+        return region.getBinding()
+    }
     
     var body: some View {
         NavigationView {
@@ -9,6 +20,30 @@ struct MapView: View {
                 Text("Bienvenido \(authenticationViewModel.user?.email ?? "No user")")
                     .padding(.top, 32)
                 Spacer()
+                if let region = region {
+                    ZStack{
+                        Map(coordinateRegion: region, interactionModes: .all, showsUserLocation: true, userTrackingMode: .constant(.follow))
+                            .ignoresSafeArea()
+                        VStack{
+                            HStack{
+                                Text("Arriba los pumas")
+                            }
+                            Spacer()
+                        }
+                    }
+                }
+            }
+        }
+        struct MapWithUserLocation_Previews: PreviewProvider {
+            static var previews: some View {
+                MapWithUserLocation()
+            }
+        }
+        extension MKCoordinateRegion {
+            
+            static func DefaultRegion() -> MKCoordinateRegion {
+                MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 19.374063076088753, longitude: -99.18268744297909), latitudinalMeters: 500, longitudinalMeters: 500)
+            }
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Home")
@@ -24,6 +59,16 @@ struct MapView: View {
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         MapView(authenticationViewModel: AuthenticationViewModel())
+    }
+}
+extension MKCoordinateRegion {
+    
+    static func DefaultRegion() -> MKCoordinateRegion {
+        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 19.374063076088753, longitude: -99.18268744297909), latitudinalMeters: 500, longitudinalMeters: 500)
+    }
+    
+    func getBinding() -> Binding<MKCoordinateRegion>? {
+        return Binding<MKCoordinateRegion>(.constant(self))
     }
 }
 
