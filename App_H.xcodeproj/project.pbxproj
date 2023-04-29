@@ -14,6 +14,8 @@
 		71FC101629FD789300DDF9C2 /* App_HTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC101529FD789300DDF9C2 /* App_HTests.swift */; };
 		71FC102029FD789300DDF9C2 /* App_HUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC101F29FD789300DDF9C2 /* App_HUITests.swift */; };
 		71FC102229FD789300DDF9C2 /* App_HUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC102129FD789300DDF9C2 /* App_HUITestsLaunchTests.swift */; };
+		71FC103129FD99CD00DDF9C2 /* newPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103029FD99CD00DDF9C2 /* newPass.swift */; };
+		71FC103329FD9E0D00DDF9C2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103229FD9E0D00DDF9C2 /* MapView.swift */; };
 		8E3EC98929FD81860086FFBA /* RegisterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC98829FD81860086FFBA /* RegisterEmailView.swift */; };
 		8E3EC98B29FD81A70086FFBA /* LoginEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC98A29FD81A70086FFBA /* LoginEmailView.swift */; };
 		8E3EC98D29FD81CE0086FFBA /* DismissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC98C29FD81CE0086FFBA /* DismissView.swift */; };
@@ -54,6 +56,8 @@
 		71FC101B29FD789300DDF9C2 /* App_HUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = App_HUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71FC101F29FD789300DDF9C2 /* App_HUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_HUITests.swift; sourceTree = "<group>"; };
 		71FC102129FD789300DDF9C2 /* App_HUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_HUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		71FC103029FD99CD00DDF9C2 /* newPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPass.swift; sourceTree = "<group>"; };
+		71FC103229FD9E0D00DDF9C2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		8E3EC98829FD81860086FFBA /* RegisterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailView.swift; sourceTree = "<group>"; };
 		8E3EC98A29FD81A70086FFBA /* LoginEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailView.swift; sourceTree = "<group>"; };
 		8E3EC98C29FD81CE0086FFBA /* DismissView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissView.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				8E3EC99D29FD8D200086FFBA /* AuthenticationFirebaseDatasource.swift */,
 				8E3EC99F29FD8E6D0086FFBA /* AuthenticationRepository.swift */,
 				8E3EC9A129FD8ECB0086FFBA /* AuthenticationViewModel.swift */,
+				71FC103029FD99CD00DDF9C2 /* newPass.swift */,
+				71FC103229FD9E0D00DDF9C2 /* MapView.swift */,
 			);
 			path = App_H;
 			sourceTree = "<group>";
@@ -304,9 +310,11 @@
 				8E3EC98929FD81860086FFBA /* RegisterEmailView.swift in Sources */,
 				8E3EC99E29FD8D200086FFBA /* AuthenticationFirebaseDatasource.swift in Sources */,
 				8E3EC98D29FD81CE0086FFBA /* DismissView.swift in Sources */,
+				71FC103129FD99CD00DDF9C2 /* newPass.swift in Sources */,
 				71FC100729FD789100DDF9C2 /* AuthenticationView.swift in Sources */,
 				8E3EC9A229FD8ECC0086FFBA /* AuthenticationViewModel.swift in Sources */,
 				71FC100529FD789100DDF9C2 /* App_HApp.swift in Sources */,
+				71FC103329FD9E0D00DDF9C2 /* MapView.swift in Sources */,
 				8E3EC98B29FD81A70086FFBA /* LoginEmailView.swift in Sources */,
 				8E3EC9A029FD8E6D0086FFBA /* AuthenticationRepository.swift in Sources */,
 			);

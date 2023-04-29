@@ -1,36 +1,35 @@
 import SwiftUI
 import Foundation
 
-struct LoginEmailView: View {
+struct newPassView: View {
+    
     @State var TextFielEmail: String = ""
-    @State var SecureFieldContraseña: String = ""
-    @State var showScreen:Bool = false
+    @State var SecureFieldContraseñaNueva: String = ""
+    @State var SecureFieldConfirmarContraseña: String = ""
+    
     var body: some View {
         VStack {
-            Text("App").font(.title).bold().padding().padding(.bottom,30)
+            Text("Restablecer Contraseña").font(.title).bold().padding().padding(.bottom,30)
             ZStack{
                 Color.gray.opacity(0.3)
                 VStack{
                     TextField("Email", text:$TextFielEmail)
                     Divider().frame(width: 315, height: 4).overlay(.white)
-                    TextField("Contraseña", text:$SecureFieldContraseña)
+                    TextField("Contraseña Nueva", text:$SecureFieldContraseñaNueva)
+                    Divider().frame(width: 315, height: 4).overlay(.white)
+                    TextField("Confirmar Contraseña", text:$SecureFieldConfirmarContraseña)
                     Divider().frame(width: 315, height: 4).overlay(.white)
                 }.padding()
             }.frame(width: 350, height: 110).padding(.bottom,30)
             
-            Button("Entrar"){
+            Button("Cambiar"){
             }.frame(width: 300, height: 60).background(.black).foregroundColor(.white).cornerRadius(30)
-            Button("¿Olvidaste tu contraseña?"){
-               showScreen = true
-            }.foregroundColor(.red)
         }
-        NavigationLink("",destination: newPassView(), isActive: $showScreen)
-
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct newPass_Previews: PreviewProvider {
     static var previews: some View {
-        LoginEmailView()
+        newPassView()
     }
 }

@@ -28,7 +28,8 @@ struct App_HApp: App {
     var body: some Scene {
         WindowGroup {
             if let user = authenticationViewModel.user {
-                            Text("User logged! \(user.email)")
+                            //Text("User logged! \(user.email)")
+                            MapView()
                         } else {
                             AuthenticationView(authenticationViewModel: authenticationViewModel)
                         }
