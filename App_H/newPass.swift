@@ -1,5 +1,6 @@
 import SwiftUI
 import Foundation
+import FirebaseAuth
 
 struct newPassView: View {
     
@@ -29,6 +30,10 @@ struct newPassView: View {
         }
     }
 }
+
+
+
+
 
 struct newPass_Previews: PreviewProvider {
     static var previews: some View {

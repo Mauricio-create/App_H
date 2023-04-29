@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 final class AuthenticationRepository {
     private let authenticationFirebaseDatasource: AuthenticationFirebaseDatasource
@@ -33,5 +34,20 @@ final class AuthenticationRepository {
     func logout() throws {
             try authenticationFirebaseDatasource.logout()
         }
+    
+    func updatePassword(newPassword: String, completionBlock: @escaping (Error?) -> Void) {
+        guard let user = Auth.auth().currentUser else {
+            completionBlock(NSError(domain: "Auth", code: -1, userInfo: [NSLocalizedDescriptionKey: "No hay usuario autenticado"]))
+            return
+        }
+        
+        user.updatePassword(to: newPassword) { error in
+            if let error = error {
+                completionBlock(error)
+            } else {
+                completionBlock(nil)
+            }
+        }
+    }
     
 }

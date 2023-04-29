@@ -45,6 +45,16 @@ final class AuthenticationViewModel: ObservableObject {
             }
         }
     
+    func changePassword(newPassword: String) {
+        authenticationRepository.updatePassword(newPassword: newPassword) { error in
+            if let error = error {
+                self.messageError = error.localizedDescription
+            } else {
+                // Contraseña actualizada correctamente
+            }
+        }
+    }
+    
     func logout() {
             do {
                 try authenticationRepository.logout()
