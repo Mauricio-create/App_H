@@ -4,7 +4,7 @@ import MapKit
 struct MapView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     @StateObject private var locationManager = LocationManager()
-    
+    @State var showAlert:Bool = false
     var region: Binding<MKCoordinateRegion>? {
         guard let location = locationManager.location else {
             return MKCoordinateRegion.DefaultRegion().getBinding()
@@ -38,7 +38,13 @@ struct MapView: View {
             .navigationTitle("Home")
             .toolbar {
                 Button("Logout") {
-                    authenticationViewModel.logout()
+                    showAlert = true
+                }.alert(isPresented: $showAlert) {
+                    Alert(title: Text("Cerrar sesión"), message: Text("¿Estas seguro?"), primaryButton: .default(Text("Yes")){
+                        authenticationViewModel.logout()
+                    }, secondaryButton: .default(Text("No")){
+                    })
+                    
                 }
             }
         }

@@ -28,9 +28,11 @@ struct AuthenticationView: View {
                 Button(action: {
                     authenticationSheetView = .login
                 }, label: {
-                    Label("Iniciar sesión", systemImage: "envelope.fill")
+                    Text("Iniciar sesión")
                 })
-                .tint(.black)
+                .foregroundColor(.white)
+                .background(.black)
+                .cornerRadius(30)
             }
             .controlSize(.large)
             .buttonStyle(.bordered)
