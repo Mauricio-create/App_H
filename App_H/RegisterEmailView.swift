@@ -15,7 +15,7 @@ struct RegisterEmailView: View {
     @State var textFieldApellido: String = ""
     var body: some View {
         VStack {
-            Text("Regístrate").font(.title).bold()
+            Text("Regístrate").font(.title).bold().padding(.bottom, 30)
             ZStack{
                 Color.gray.opacity(0.3)
                 VStack{
