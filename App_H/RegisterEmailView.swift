@@ -10,40 +10,30 @@ import SwiftUI
 struct RegisterEmailView: View {
     @State var textFieldEmail: String = ""
     @State var textFieldPassword: String = ""
-    
+    @State var textFieldName: String = ""
+    @State var textFieldApellido: String = ""
     var body: some View {
         VStack {
-            DismissView()
-                .padding(.top, 8)
-            Group {
-                Text("👋 Bienvenido a")
-                Text("SwiftBeta")
-                    .bold()
-                    .underline()
-            }
-            .padding(.horizontal, 8)
-            .multilineTextAlignment(.center)
-            .font(.largeTitle)
-            .tint(.primary)
-            Group {
-                Text("Regístrate para guardar todos tus enlaces en una sola app.")
-                    .tint(.secondary)
-                    .multilineTextAlignment(.center)
-                    .padding(.top, 2)
-                    .padding(.bottom, 32)
-                TextField("Añade tu correo electrónico", text: $textFieldEmail)
-                TextField("Añade tu contraseña", text: $textFieldPassword)
-                Button("Aceptar") {
-                    print("Aceptar")
-                }
-                .padding(.top, 18)
-                .buttonStyle(.bordered)
-                .tint(.blue)
-            }
-            .textFieldStyle(.roundedBorder)
-            .padding(.horizontal, 64)
-            Spacer()
+            Text("Regístrate").font(.title).bold()
+            ZStack{
+                Color.gray.opacity(0.3)
+                VStack{
+                    TextField("Nombre", text:$textFieldName)
+                    Divider().frame(width: 315, height: 4).overlay(.white)
+                    TextField("Apellido", text:$textFieldApellido)
+                    Divider().frame(width: 315, height: 4).overlay(.white)
+                    TextField("Email", text:$textFieldEmail)
+                    Divider().frame(width: 315, height: 4).overlay(.white)
+                    TextField("Contraseña", text:$textFieldPassword)
+                    Divider().frame(width: 315, height: 4).overlay(.white)
+                }.padding()
+            }.frame(width: 350, height: 170).padding(.bottom,30)
+            Button("Regístrate"){
+                
+            }.frame(width: 300, height: 60).background(.black).foregroundColor(.white).cornerRadius(30)
+            
         }
+        .padding()
     }
 }
 struct RegisterEmailView_Previews: PreviewProvider {
@@ -51,3 +41,5 @@ struct RegisterEmailView_Previews: PreviewProvider {
         RegisterEmailView()
     }
 }
+
+
