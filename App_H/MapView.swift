@@ -33,58 +33,48 @@ struct MapView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Home")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    HStack {
-                        Button(action: {
-                            // Acción de perfil
-                        }, label: {
-                            Image(systemName: "person.circle.fill")
-                        })
-                    }
-                }
-            }
         }
         .accentColor(.black)
         .overlay(
-            TabView {
-                Text("")
-                    .tabItem {
-                        Image(systemName: "map")
-                        Text("Zonas")
-                    }
-                    .tag(0)
-                Text("")
-                    .tabItem {
-                        Image(systemName: "person")
-                        Text("Perfil")
-                    }
-                    .tag(1)
-                Text("")
-                    .tabItem{
-                        Button(action: {
-                            showAlert = true
-                        }, label: {
-                            Image(systemName: "power")
-                        })
-                        .alert(isPresented: $showAlert) {
-                            Alert(title: Text("Cerrar sesión"), message: Text("¿Estás seguro?"), primaryButton: .default(Text("Yes")) {
-                                authenticationViewModel.logout()
-                            }, secondaryButton: .default(Text("No")) {
-                            })
+            VStack {
+                TabView {
+                    Text("")
+                        .tabItem {
+                            Image(systemName: "map")
+                            Text("Zonas")
                         }
-                        Text("Logout")
-                    }
-                    .tag(2)
+                        .tag(0)
+                    Text("")
+                        .tabItem {
+                            Image(systemName: "person")
+                            Text("Perfil")
+                        }
+                        .tag(1)
+                    Text("")
+                        .tabItem{
+                            Image(systemName:"power")
+                            Text("Logout")
+                        }
+                        .tag(2)
+                }
+                .frame(maxWidth: .infinity, maxHeight: 60)
+                .background(Color.white)
+                .cornerRadius(15)
+                .padding(.horizontal, 20)
+                .padding(.bottom, 20)
+                .onTapGesture {
+                    showAlert = true
+                }
+                .alert(isPresented: $showAlert) {
+                    Alert(title: Text("Cerrar sesión"), message: Text("¿Estás seguro?"), primaryButton: .default(Text("Yes")) {
+                        authenticationViewModel.logout()
+                    }, secondaryButton: .default(Text("No")) {
+                    })
+                }
             }
-            .frame(maxWidth: .infinity, maxHeight: 60)
-            .background(Color.white)
-            .cornerRadius(15)
-            .padding(.horizontal, 20)
-            .padding(.bottom, 20)
             , alignment: .bottom
         )
+
     }
 }
 
@@ -104,5 +94,3 @@ struct MapView_Previews: PreviewProvider {
         MapView(authenticationViewModel: AuthenticationViewModel())
     }
 }
-
-
