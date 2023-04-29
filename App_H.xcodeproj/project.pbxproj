@@ -14,6 +14,9 @@
 		71FC101629FD789300DDF9C2 /* App_HTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC101529FD789300DDF9C2 /* App_HTests.swift */; };
 		71FC102029FD789300DDF9C2 /* App_HUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC101F29FD789300DDF9C2 /* App_HUITests.swift */; };
 		71FC102229FD789300DDF9C2 /* App_HUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC102129FD789300DDF9C2 /* App_HUITestsLaunchTests.swift */; };
+		8E3EC98929FD81860086FFBA /* RegisterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC98829FD81860086FFBA /* RegisterEmailView.swift */; };
+		8E3EC98B29FD81A70086FFBA /* LoginEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC98A29FD81A70086FFBA /* LoginEmailView.swift */; };
+		8E3EC98D29FD81CE0086FFBA /* DismissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC98C29FD81CE0086FFBA /* DismissView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		71FC101B29FD789300DDF9C2 /* App_HUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = App_HUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71FC101F29FD789300DDF9C2 /* App_HUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_HUITests.swift; sourceTree = "<group>"; };
 		71FC102129FD789300DDF9C2 /* App_HUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_HUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8E3EC98829FD81860086FFBA /* RegisterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailView.swift; sourceTree = "<group>"; };
+		8E3EC98A29FD81A70086FFBA /* LoginEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailView.swift; sourceTree = "<group>"; };
+		8E3EC98C29FD81CE0086FFBA /* DismissView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 				71FC100629FD789100DDF9C2 /* AuthenticationView.swift */,
 				71FC100829FD789300DDF9C2 /* Assets.xcassets */,
 				71FC100A29FD789300DDF9C2 /* Preview Content */,
+				8E3EC98829FD81860086FFBA /* RegisterEmailView.swift */,
+				8E3EC98A29FD81A70086FFBA /* LoginEmailView.swift */,
+				8E3EC98C29FD81CE0086FFBA /* DismissView.swift */,
 			);
 			path = App_H;
 			sourceTree = "<group>";
@@ -257,8 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E3EC98929FD81860086FFBA /* RegisterEmailView.swift in Sources */,
+				8E3EC98D29FD81CE0086FFBA /* DismissView.swift in Sources */,
 				71FC100729FD789100DDF9C2 /* AuthenticationView.swift in Sources */,
 				71FC100529FD789100DDF9C2 /* App_HApp.swift in Sources */,
+				8E3EC98B29FD81A70086FFBA /* LoginEmailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
