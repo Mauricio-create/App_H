@@ -15,7 +15,7 @@ struct LoginEmailView: View {
                 VStack{
                     TextField("Email", text:$TextFielEmail)
                     Divider().frame(width: 315, height: 4).overlay(.white)
-                    TextField("Contraseña", text:$SecureFieldPassword)
+                    SecureField("Contraseña", text:$SecureFieldPassword)
                     Divider().frame(width: 315, height: 4).overlay(.white)
                 }.padding()
             }.frame(width: 350, height: 110).padding(.bottom,30)
