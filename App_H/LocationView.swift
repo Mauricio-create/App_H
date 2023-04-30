@@ -18,7 +18,7 @@ struct LocationView: View {
                     .font(.title)
                 
                 Text("Lugares Disponibles: \(lugar.capacity-lugar.spots_taken)")
-                Text("Costo por hora: \(lugar.cost)")
+                Text("Costo por hora: \(lugar.cost.formatted())")
             }
         }
     }
