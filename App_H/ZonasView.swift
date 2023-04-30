@@ -3,40 +3,36 @@ import Foundation
 
 struct ZonasView: View {
     @State private var newPlace = ""
-    @State private var places=[ZonasModel]()
+    @State private var places:[ZonasModel] = ZonasModel.Zonas
     private var dataPersistence = DataPersistence()
+    @StateObject var posicion=coordenadas()
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(places, id: \.self) { place in
+                    ForEach(places) { place in
                         HStack {
-                            Text(place.nombre)
+                            Button(action: {
+                                posicion.lat=place.latitud
+                                posicion.long=place.longitud
+                                posicion.ChangeRegion=true
+                            }, label: {
+                                Text(place.nombre)
+                            })
                             Spacer()
                             Image(systemName: "trash")
                                 .foregroundColor(.red)
                                 .onTapGesture {
                                     places.removeAll(where: { $0 == place })
                                 }
-                        }
+                        }.padding()
                     }
                 }
-                .padding()
+                
             }
             .navigationTitle("Zona")
-        }.onAppear{
-            do {
-                self.places = try dataPersistence.loadItems()
-            } catch{
-                
-            }
-        }.onDisappear {
-            do {
-                try dataPersistence.saveItems(places)
-            } catch {
-                
-            }
         }
+        .environmentObject(posicion)
     }
     func addItem(Item: ZonasModel){
         places.append(Item)

@@ -81,7 +81,7 @@ struct App_HApp: App {
         WindowGroup {
             if let _ = authenticationViewModel.user {
                             //Text("User logged! \(user.email)")
-                            MapView(authenticationViewModel: authenticationViewModel)
+                MapViewBueno(authenticationViewModel: authenticationViewModel)
                         } else {
                             AuthenticationView(authenticationViewModel: authenticationViewModel)
                         }

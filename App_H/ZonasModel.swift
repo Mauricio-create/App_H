@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import MapKit
 
 
 
@@ -24,8 +25,8 @@ struct ZonasModel: Identifiable,Codable, Hashable{
 
 
 extension ZonasModel{
-    static let Zonas=[
-        ZonasModel(id:UUID().uuidString,nombre:"Plaza Universidad",latitud:19.367404116160845, longitud: -99.16685200327753, costo: 50, cap_max:100, disp:100),
+    static let Zonas:[ZonasModel]=[
+        .init(id:UUID().uuidString,nombre:"Plaza Universidad",latitud:19.367404116160845, longitud: -99.16685200327753, costo: 50, cap_max:100, disp:100),
         ZonasModel(id:UUID().uuidString,nombre:"Patio Universidad",latitud:19.36628152047223, longitud:  -99.16724146137531, costo:0, cap_max:200, disp:200),
         ZonasModel(id:UUID().uuidString,nombre:"Universidad Panamericana",latitud:19.37300328192388, longitud: -99.18393299133301, costo:0, cap_max:300, disp:300),
         ZonasModel(id:UUID().uuidString,nombre:"Galerías Insurgentes",latitud:19.37106103969733, longitud: -99.17870024860294, costo: 50, cap_max:100, disp:100),

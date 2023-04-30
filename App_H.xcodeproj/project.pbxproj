@@ -20,6 +20,7 @@
 		71FC103729FDF49700DDF9C2 /* ZonasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103629FDF49700DDF9C2 /* ZonasView.swift */; };
 		71FC103929FE04DA00DDF9C2 /* ZonasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103829FE04DA00DDF9C2 /* ZonasModel.swift */; };
 		71FC103B29FE092400DDF9C2 /* DataPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103A29FE092400DDF9C2 /* DataPersistance.swift */; };
+		71FC103D29FEE3AD00DDF9C2 /* MapViewBueno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103C29FEE3AD00DDF9C2 /* MapViewBueno.swift */; };
 		8E3C8CBD29FDEB2700B7006E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3C8CBC29FDEB2700B7006E /* FirebaseDatabase */; };
 		8E3EC98929FD81860086FFBA /* RegisterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC98829FD81860086FFBA /* RegisterEmailView.swift */; };
 		8E3EC98B29FD81A70086FFBA /* LoginEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC98A29FD81A70086FFBA /* LoginEmailView.swift */; };
@@ -68,6 +69,7 @@
 		71FC103629FDF49700DDF9C2 /* ZonasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonasView.swift; sourceTree = "<group>"; };
 		71FC103829FE04DA00DDF9C2 /* ZonasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonasModel.swift; sourceTree = "<group>"; };
 		71FC103A29FE092400DDF9C2 /* DataPersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistance.swift; sourceTree = "<group>"; };
+		71FC103C29FEE3AD00DDF9C2 /* MapViewBueno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewBueno.swift; sourceTree = "<group>"; };
 		8E3EC98829FD81860086FFBA /* RegisterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailView.swift; sourceTree = "<group>"; };
 		8E3EC98A29FD81A70086FFBA /* LoginEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailView.swift; sourceTree = "<group>"; };
 		8E3EC98C29FD81CE0086FFBA /* DismissView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				71FC103629FDF49700DDF9C2 /* ZonasView.swift */,
 				71FC103A29FE092400DDF9C2 /* DataPersistance.swift */,
 				71FC103829FE04DA00DDF9C2 /* ZonasModel.swift */,
+				71FC103C29FEE3AD00DDF9C2 /* MapViewBueno.swift */,
 			);
 			path = App_H;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				71FC103329FD9E0D00DDF9C2 /* MapView.swift in Sources */,
 				8E3EC98B29FD81A70086FFBA /* LoginEmailView.swift in Sources */,
 				8E3EC9A029FD8E6D0086FFBA /* AuthenticationRepository.swift in Sources */,
+				71FC103D29FEE3AD00DDF9C2 /* MapViewBueno.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
