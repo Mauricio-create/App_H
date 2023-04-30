@@ -29,6 +29,16 @@ struct ZonasView: View {
                     }
                 }
                 
+                TextField("Nuevo lugar", text: $newPlace)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                
+                Button(action: {
+                    places.append(ZonasModel(id: newPlace, nombre: newPlace, latitud: 0.0, longitud: 0.0, costo:0.0, cap_max:Int(0.0), disp:Int(0.0)))
+                    newPlace = ""
+                }, label: {
+                    Text("Añadir lugar")
+                })
             }
             .navigationTitle("Zona")
         }
