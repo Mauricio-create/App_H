@@ -17,7 +17,7 @@ struct RegisterEmailView: View {
         VStack {
             Text("Regístrate").font(.title).bold().padding(.bottom, 30)
             ZStack{
-                Color.gray.opacity(0.3)
+                Color.gray.opacity(0.3).cornerRadius(30)
                 VStack{
                     TextField("Nombre", text:$textFieldName)
                     Divider().frame(width: 315, height: 4).overlay(.white)

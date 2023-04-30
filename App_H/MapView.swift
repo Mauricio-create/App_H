@@ -36,43 +36,41 @@ struct MapView: View {
         }
         .accentColor(.black)
         .overlay(
-            VStack {
-                TabView {
-                    Text("")
-                        .tabItem {
-                            Image(systemName: "map")
-                            Text("Zonas")
+            VStack{
+                Spacer()
+                HStack{
+                    Spacer()
+                    NavigationLink(destination: PerfilView(), label: {
+                        VStack{
+                            Image(systemName: "signpost.right.and.left").foregroundColor(.white)
+                            Text("Zonas").foregroundColor(.white)
                         }
-                        .tag(0)
-                    Text("")
-                        .tabItem {
-                            Image(systemName: "person")
-                            Text("Perfil")
+                    }).padding()
+                    Spacer()
+                    NavigationLink(destination: PerfilView(), label: {
+                        VStack{
+                            Image(systemName: "person.circle").foregroundColor(.white)
+                            Text("Perfil").foregroundColor(.white)
                         }
-                        .tag(1)
-                    Text("")
-                        .tabItem{
-                            Image(systemName:"power")
-                            Text("Logout")
+                    }).padding()
+                    Spacer()
+                    Button(action:{
+                        showAlert = true
+                    }, label:{
+                        VStack{
+                            Image(systemName: "rectangle.portrait.and.arrow.forward").foregroundColor(.white)
+                            Text("Logout").foregroundColor(.white)
                         }
-                        .tag(2)
-                }
-                .frame(maxWidth: .infinity, maxHeight: 60)
-                .background(Color.white)
-                .cornerRadius(15)
-                .padding(.horizontal, 20)
-                .padding(.bottom, 20)
-                .onTapGesture {
-                    showAlert = true
-                }
-                .alert(isPresented: $showAlert) {
-                    Alert(title: Text("Cerrar sesión"), message: Text("¿Estás seguro?"), primaryButton: .default(Text("Yes")) {
-                        authenticationViewModel.logout()
-                    }, secondaryButton: .default(Text("No")) {
-                    })
-                }
+                    }).padding().alert(isPresented:$showAlert){
+                        Alert(title:Text("Cerrar sesión"), message: Text("¿Estás seguro?"), primaryButton: .default(Text("Sí")){
+                            authenticationViewModel.logout()
+                        }, secondaryButton: .destructive(Text("No")){
+                            
+                        })
+                    }
+                    Spacer()
+                }.background(.gray.opacity(0.8)).frame(width: 350).cornerRadius(30)
             }
-            , alignment: .bottom
         )
 
     }
