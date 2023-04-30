@@ -25,6 +25,7 @@ struct AuthenticationView: View {
                 .resizable()
                 .frame(width: 200, height: 200)
             VStack {
+                Image("Carro1").resizable().frame(width: 180, height: 150).padding(.bottom, 40)
                 Button(action: {
                     authenticationSheetView = .login
                 }, label: {

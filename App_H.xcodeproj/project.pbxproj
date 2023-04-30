@@ -17,6 +17,9 @@
 		71FC103129FD99CD00DDF9C2 /* newPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103029FD99CD00DDF9C2 /* newPass.swift */; };
 		71FC103329FD9E0D00DDF9C2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103229FD9E0D00DDF9C2 /* MapView.swift */; };
 		71FC103529FDE61200DDF9C2 /* PerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103429FDE61200DDF9C2 /* PerfilView.swift */; };
+		71FC103729FDF49700DDF9C2 /* ZonasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103629FDF49700DDF9C2 /* ZonasView.swift */; };
+		71FC103929FE04DA00DDF9C2 /* ZonasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103829FE04DA00DDF9C2 /* ZonasModel.swift */; };
+		71FC103B29FE092400DDF9C2 /* DataPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103A29FE092400DDF9C2 /* DataPersistance.swift */; };
 		8E3C8CBD29FDEB2700B7006E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3C8CBC29FDEB2700B7006E /* FirebaseDatabase */; };
 		8E3EC98929FD81860086FFBA /* RegisterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC98829FD81860086FFBA /* RegisterEmailView.swift */; };
 		8E3EC98B29FD81A70086FFBA /* LoginEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC98A29FD81A70086FFBA /* LoginEmailView.swift */; };
@@ -62,6 +65,9 @@
 		71FC103029FD99CD00DDF9C2 /* newPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPass.swift; sourceTree = "<group>"; };
 		71FC103229FD9E0D00DDF9C2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		71FC103429FDE61200DDF9C2 /* PerfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilView.swift; sourceTree = "<group>"; };
+		71FC103629FDF49700DDF9C2 /* ZonasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonasView.swift; sourceTree = "<group>"; };
+		71FC103829FE04DA00DDF9C2 /* ZonasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonasModel.swift; sourceTree = "<group>"; };
+		71FC103A29FE092400DDF9C2 /* DataPersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistance.swift; sourceTree = "<group>"; };
 		8E3EC98829FD81860086FFBA /* RegisterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailView.swift; sourceTree = "<group>"; };
 		8E3EC98A29FD81A70086FFBA /* LoginEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailView.swift; sourceTree = "<group>"; };
 		8E3EC98C29FD81CE0086FFBA /* DismissView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissView.swift; sourceTree = "<group>"; };
@@ -140,6 +146,9 @@
 				71FC103229FD9E0D00DDF9C2 /* MapView.swift */,
 				FE51821929FDA82F00EB99C2 /* LocationManager.swift */,
 				71FC103429FDE61200DDF9C2 /* PerfilView.swift */,
+				71FC103629FDF49700DDF9C2 /* ZonasView.swift */,
+				71FC103A29FE092400DDF9C2 /* DataPersistance.swift */,
+				71FC103829FE04DA00DDF9C2 /* ZonasModel.swift */,
 			);
 			path = App_H;
 			sourceTree = "<group>";
@@ -319,12 +328,15 @@
 				8E3EC98929FD81860086FFBA /* RegisterEmailView.swift in Sources */,
 				8E3EC99E29FD8D200086FFBA /* AuthenticationFirebaseDatasource.swift in Sources */,
 				8E3EC98D29FD81CE0086FFBA /* DismissView.swift in Sources */,
+				71FC103929FE04DA00DDF9C2 /* ZonasModel.swift in Sources */,
 				FE51821A29FDA82F00EB99C2 /* LocationManager.swift in Sources */,
+				71FC103729FDF49700DDF9C2 /* ZonasView.swift in Sources */,
 				71FC103529FDE61200DDF9C2 /* PerfilView.swift in Sources */,
 				71FC103129FD99CD00DDF9C2 /* newPass.swift in Sources */,
 				71FC100729FD789100DDF9C2 /* AuthenticationView.swift in Sources */,
 				8E3EC9A229FD8ECC0086FFBA /* AuthenticationViewModel.swift in Sources */,
 				71FC100529FD789100DDF9C2 /* App_HApp.swift in Sources */,
+				71FC103B29FE092400DDF9C2 /* DataPersistance.swift in Sources */,
 				71FC103329FD9E0D00DDF9C2 /* MapView.swift in Sources */,
 				8E3EC98B29FD81A70086FFBA /* LoginEmailView.swift in Sources */,
 				8E3EC9A029FD8E6D0086FFBA /* AuthenticationRepository.swift in Sources */,

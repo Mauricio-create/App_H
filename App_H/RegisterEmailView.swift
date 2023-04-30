@@ -23,7 +23,7 @@ struct RegisterEmailView: View {
                     Divider().frame(width: 315, height: 4).overlay(.white)
                     TextField("Apellido", text:$textFieldApellido)
                     Divider().frame(width: 315, height: 4).overlay(.white)
-                    TextField("Email", text:$textFieldEmail)
+                    TextField("Email", text:$textFieldEmail).autocorrectionDisabled()
                     Divider().frame(width: 315, height: 4).overlay(.white)
                     SecureField("Contraseña", text:$textFieldPassword)
                     Divider().frame(width: 315, height: 4).overlay(.white)

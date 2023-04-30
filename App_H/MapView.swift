@@ -34,7 +34,7 @@ struct MapView: View {
                             Spacer()
                             HStack{
                                 Spacer()
-                                NavigationLink(destination: PerfilView(), label: {
+                                NavigationLink(destination: ZonasView(), label: {
                                     VStack{
                                         Image(systemName: "signpost.right.and.left").foregroundColor(.white)
                                         Text("Zonas").foregroundColor(.white)
