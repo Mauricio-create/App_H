@@ -15,15 +15,13 @@ struct PerfilView: View {
                     Color.gray.opacity(0.3).cornerRadius(30)
                     VStack{
                         Section("Nombre"){
-                            TextField("Aqui debe decir el nombre del usuario", text:$TextFielNombre)
+                            Text("Diego Gael León Martínez")
                             Divider().frame(width: 315, height: 4).overlay(.white)
                         }
                         Section("Email"){
-                            TextField("Aqui debe decir el email del usuario", text:$TextFieldEmail)
+                            Text("0235446@up.edu.mx")
                             Divider().frame(width: 315, height: 4).overlay(.white)
                         }
-                        Button("Cerrar"){
-                        }.foregroundColor(.red)
                     }.padding()
                 }.frame(width: 350, height: 140).padding(.bottom,30)
                 

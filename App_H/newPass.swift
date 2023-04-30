@@ -15,23 +15,19 @@ struct newPassView: View {
                 VStack {
                     Text("Restablecer Contraseña").font(.title).bold().padding().padding(.bottom,30)
                     ZStack{
-                        Color.gray.opacity(0.3)
+                        Color.gray.opacity(0.3).cornerRadius(30)
                         VStack{
                             TextField("Email", text:$TextFielEmail)
-                            Divider().frame(width: 315, height: 4).overlay(.white)
-                            TextField("Contraseña Nueva", text:$SecureFieldContraseñaNueva)
-                            Divider().frame(width: 315, height: 4).overlay(.white)
-                            TextField("Confirmar Contraseña", text:$SecureFieldConfirmarContraseña)
                             Divider().frame(width: 315, height: 4).overlay(.white)
                         }.padding()
                     }.frame(width: 350, height: 110).padding(.bottom,30)
                     
-                    Button("Cambiar"){
+                    Button("Mandar link para cambio"){
                         Auth.auth().sendPasswordReset(withEmail: TextFielEmail) { error in
                             if let error = error {
-                                print("Error al enviar correo electrónico de restablecimiento de contraseña: \(error.localizedDescription)")
+                                Text("Error al enviar correo electrónico de restablecimiento de contraseña: \(error.localizedDescription)")
                             } else {
-                                print("Correo electrónico de restablecimiento de contraseña enviado")
+                                Text("Correo electrónico de restablecimiento de contraseña enviado")
                             }
                         }
                     }.frame(width: 300, height: 60).background(.black).foregroundColor(.white).cornerRadius(30)
