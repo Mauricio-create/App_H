@@ -25,9 +25,45 @@ struct MapView: View {
                             .ignoresSafeArea()
                         VStack{
                             HStack{
-
+                                
                             }
                             Spacer()
+                        }
+                        
+                        VStack{
+                            Spacer()
+                            HStack{
+                                Spacer()
+                                NavigationLink(destination: PerfilView(), label: {
+                                    VStack{
+                                        Image(systemName: "signpost.right.and.left").foregroundColor(.white)
+                                        Text("Zonas").foregroundColor(.white)
+                                    }
+                                }).padding()
+                                Spacer()
+                                NavigationLink(destination: PerfilView(), label: {
+                                    VStack{
+                                        Image(systemName: "person.circle").foregroundColor(.white)
+                                        Text("Perfil").foregroundColor(.white)
+                                    }
+                                }).padding()
+                                Spacer()
+                                Button(action:{
+                                    showAlert = true
+                                }, label:{
+                                    VStack{
+                                        Image(systemName: "rectangle.portrait.and.arrow.forward").foregroundColor(.white)
+                                        Text("Logout").foregroundColor(.white)
+                                    }
+                                }).padding().alert(isPresented:$showAlert){
+                                    Alert(title:Text("Cerrar sesión"), message: Text("¿Estás seguro?"), primaryButton: .default(Text("Sí")){
+                                        authenticationViewModel.logout()
+                                    }, secondaryButton: .destructive(Text("No")){
+                                        
+                                    })
+                                }
+                                Spacer()
+                            }.background(.gray.opacity(0.8)).frame(width: 350).cornerRadius(30)
                         }
                     }
                 }
@@ -35,43 +71,7 @@ struct MapView: View {
             .navigationBarTitleDisplayMode(.inline)
         }
         .accentColor(.black)
-        .overlay(
-            VStack{
-                Spacer()
-                HStack{
-                    Spacer()
-                    NavigationLink(destination: PerfilView(), label: {
-                        VStack{
-                            Image(systemName: "signpost.right.and.left").foregroundColor(.white)
-                            Text("Zonas").foregroundColor(.white)
-                        }
-                    }).padding()
-                    Spacer()
-                    NavigationLink(destination: PerfilView(), label: {
-                        VStack{
-                            Image(systemName: "person.circle").foregroundColor(.white)
-                            Text("Perfil").foregroundColor(.white)
-                        }
-                    }).padding()
-                    Spacer()
-                    Button(action:{
-                        showAlert = true
-                    }, label:{
-                        VStack{
-                            Image(systemName: "rectangle.portrait.and.arrow.forward").foregroundColor(.white)
-                            Text("Logout").foregroundColor(.white)
-                        }
-                    }).padding().alert(isPresented:$showAlert){
-                        Alert(title:Text("Cerrar sesión"), message: Text("¿Estás seguro?"), primaryButton: .default(Text("Sí")){
-                            authenticationViewModel.logout()
-                        }, secondaryButton: .destructive(Text("No")){
-                            
-                        })
-                    }
-                    Spacer()
-                }.background(.gray.opacity(0.8)).frame(width: 350).cornerRadius(30)
-            }
-        )
+        
 
     }
 }
