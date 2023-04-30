@@ -27,39 +27,13 @@ struct ZonasModel: Identifiable,Codable, Hashable{
 extension ZonasModel{
     static let Zonas=[
         ZonasModel(id:UUID().uuidString,nombre:"Plaza Universidad",latitud:19.367404116160845, longitud: -99.16685200327753, costo: 50, cap_max:100, disp:100),
-        ZonasModel(id:UUID().uuidString,nombre:"Lugar B",latitud:19.367404116160845, longitud: -90.16685200327753, costo:0, cap_max:200, disp:200),
-        ZonasModel(id:UUID().uuidString,nombre:"Lugar C",latitud:19.367404116160845, longitud: -93.16685200327753, costo:0, cap_max:300, disp:300)
+        ZonasModel(id:UUID().uuidString,nombre:"Patio Universidad",latitud:19.36628152047223, longitud:  -99.16724146137531, costo:0, cap_max:200, disp:200),
+        ZonasModel(id:UUID().uuidString,nombre:"Universidad Panamericana",latitud:19.37300328192388, longitud: -99.18393299133301, costo:0, cap_max:300, disp:300),
+        ZonasModel(id:UUID().uuidString,nombre:"Galerías Insurgentes",latitud:19.37106103969733, longitud: -99.17870024860294, costo: 50, cap_max:100, disp:100),
+        ZonasModel(id:UUID().uuidString,nombre:"Manacar",latitud:19.36900122769999, longitud: -99.18120930442325, costo:0, cap_max:200, disp:200),
+        ZonasModel(id:UUID().uuidString,nombre:"Pabellón del Valle",latitud:19.372975288609943, longitud: -99.1630787703757, costo:0, cap_max:300, disp:300)
     ]
 }
 
-func obtenerZonasDeFirestore() {
-    let db = Firestore.firestore()
 
-    db.collection("Estacionamiento").getDocuments { (snapshot, error) in
-        if let error = error {
-            print("Error al obtener datos de Firestore: \(error.localizedDescription)")
-            return
-        }
-
-        guard let snapshot = snapshot else {
-            print("No se encontraron documentos")
-            return
-        }
-
-        let zonas = snapshot.documents.map { (document) -> ZonasModel in
-            let data = document.data()
-            let id = document.documentID
-            let nombre = data["nombre"] as? String ?? ""
-            let latitud = data["latitud"] as? Double ?? 0
-            let longitud = data["longitud"] as? Double ?? 0
-            let costo = data["costo"] as? Float ?? 0
-            let cap_max = data["cap_max"] as? Int ?? 0
-            let disp = data["disp"] as? Int ?? 0
-
-            return ZonasModel(id: id, nombre: nombre, latitud: latitud, longitud: longitud, costo: costo, cap_max: cap_max, disp: disp)
-        }
-
-        // Haz lo que quieras con la variable "zonas", que contiene las instancias de ZonasModel
-    }
-}
 
