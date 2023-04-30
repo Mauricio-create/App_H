@@ -10,11 +10,11 @@ import SwiftUI
 
 struct ZonasModel: Identifiable,Codable, Hashable{
 
-    var id:UUID
+    var id:String
     var nombre:String
     var latitud:Double
     var longitud:Double
-    var costo:Double
+    var costo:Float
     var cap_max:Int
     var disp:Int
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DataPersistence {
+class DataPersistence: ObservableObject {
     
     private let fileManager = FileManager.default
     private let documentsDirectory: URL
