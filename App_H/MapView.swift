@@ -5,6 +5,7 @@ struct MapView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     @StateObject private var locationManager = LocationManager()
     @State var showAlert: Bool = false
+    @State var locations:[ZonasModel] = ZonasModel.Zonas
 
     var region: Binding<MKCoordinateRegion>? {
         guard let location = locationManager.location else {
@@ -23,12 +24,10 @@ struct MapView: View {
                     ZStack {
                         Map(coordinateRegion: region, interactionModes: .all, showsUserLocation: true, userTrackingMode: .constant(.follow))
                             .ignoresSafeArea()
-                        VStack{
-                            HStack{
-                                
-                            }
-                            Spacer()
-                        }
+                        
+//                        ForEach(locations) { location in
+//                            MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: location.latitud, longitude: location.longitud))
+//                        }
                         
                         VStack{
                             Spacer()

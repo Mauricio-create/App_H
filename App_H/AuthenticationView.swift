@@ -20,44 +20,47 @@ struct AuthenticationView: View {
     @State private var authenticationSheetView: AuthenticationSheetView?
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     var body: some View {
-        VStack {
-            Image("swiftbeta")
-                .resizable()
-                .frame(width: 200, height: 200)
+        ZStack {
+            Image("Inicio").resizable().ignoresSafeArea()
             VStack {
-                Image("Carro1").resizable().frame(width: 180, height: 150).padding(.bottom, 40)
-                Button(action: {
-                    authenticationSheetView = .login
-                }, label: {
-                    Text("Iniciar sesión")
-                })
-                .foregroundColor(.white)
-                .background(.black)
-                .cornerRadius(30)
-            }
-            .controlSize(.large)
-            .buttonStyle(.bordered)
-            .buttonBorderShape(.capsule)
-            .padding(.top, 60)
-            Spacer()
-            HStack {
-                Button {
-                    authenticationSheetView = .register
-                } label: {
-                    Text("¿No tienes cuenta?")
-                    Text("Regístrate")
-                        .underline().foregroundColor(.blue)
+                Image("swiftbeta")
+                    .resizable()
+                    .frame(width: 200, height: 200)
+                VStack {
+                    Image("Carro1").resizable().frame(width: 180, height: 150).padding(.bottom, 40)
+                    Button(action: {
+                        authenticationSheetView = .login
+                    }, label: {
+                        Text("Iniciar sesión")
+                    })
+                    .foregroundColor(.white)
+                    .background(.black)
+                    .cornerRadius(30)
                 }
-                .tint(.black)
+                .controlSize(.large)
+                .buttonStyle(.bordered)
+                .buttonBorderShape(.capsule)
+                .padding(.top, 60)
+                Spacer()
+                HStack {
+                    Button {
+                        authenticationSheetView = .register
+                    } label: {
+                        Text("¿No tienes cuenta?")
+                        Text("Regístrate")
+                            .underline().foregroundColor(.blue)
+                    }
+                    .tint(.black)
+                }
             }
+            .sheet(item: $authenticationSheetView) { sheet in
+                switch sheet {
+                case .register:
+                    RegisterEmailView(authenticationViewModel: authenticationViewModel)
+                case .login:
+                    LoginEmailView(authenticationViewModel: authenticationViewModel)
+                }
         }
-        .sheet(item: $authenticationSheetView) { sheet in
-            switch sheet {
-            case .register:
-                RegisterEmailView(authenticationViewModel: authenticationViewModel)
-            case .login:
-                LoginEmailView(authenticationViewModel: authenticationViewModel)
-            }
         }
     }
 }
