@@ -38,6 +38,9 @@ struct ZonasView: View {
             }
         }
     }
+    func addItem(Item: ZonasModel){
+        places.append(Item)
+    }
 }
 
 struct ZonasView_Previews: PreviewProvider {
