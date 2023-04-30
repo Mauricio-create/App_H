@@ -17,6 +17,7 @@
 		71FC103129FD99CD00DDF9C2 /* newPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103029FD99CD00DDF9C2 /* newPass.swift */; };
 		71FC103329FD9E0D00DDF9C2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103229FD9E0D00DDF9C2 /* MapView.swift */; };
 		71FC103529FDE61200DDF9C2 /* PerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103429FDE61200DDF9C2 /* PerfilView.swift */; };
+		8E3C8CBD29FDEB2700B7006E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3C8CBC29FDEB2700B7006E /* FirebaseDatabase */; };
 		8E3EC98929FD81860086FFBA /* RegisterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC98829FD81860086FFBA /* RegisterEmailView.swift */; };
 		8E3EC98B29FD81A70086FFBA /* LoginEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC98A29FD81A70086FFBA /* LoginEmailView.swift */; };
 		8E3EC98D29FD81CE0086FFBA /* DismissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC98C29FD81CE0086FFBA /* DismissView.swift */; };
@@ -78,6 +79,7 @@
 			files = (
 				8E3EC99729FD89380086FFBA /* FirebaseAnalyticsSwift in Frameworks */,
 				8E3EC99C29FD8C8D0086FFBA /* FirebaseAuth in Frameworks */,
+				8E3C8CBD29FDEB2700B7006E /* FirebaseDatabase in Frameworks */,
 				8E3EC99529FD89370086FFBA /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +196,7 @@
 				8E3EC99429FD89370086FFBA /* FirebaseAnalytics */,
 				8E3EC99629FD89380086FFBA /* FirebaseAnalyticsSwift */,
 				8E3EC99B29FD8C8D0086FFBA /* FirebaseAuth */,
+				8E3C8CBC29FDEB2700B7006E /* FirebaseDatabase */,
 			);
 			productName = App_H;
 			productReference = 71FC100129FD789100DDF9C2 /* App_H.app */;
@@ -658,6 +661,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8E3C8CBC29FDEB2700B7006E /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E3EC99329FD89370086FFBA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
 		8E3EC99429FD89370086FFBA /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8E3EC99329FD89370086FFBA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
