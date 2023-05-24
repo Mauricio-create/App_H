@@ -23,6 +23,9 @@
 		71FC103D29FEE3AD00DDF9C2 /* MapViewBueno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103C29FEE3AD00DDF9C2 /* MapViewBueno.swift */; };
 		71FC103F29FF146A00DDF9C2 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC103E29FF146A00DDF9C2 /* LocationView.swift */; };
 		8E3C8CBD29FDEB2700B7006E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3C8CBC29FDEB2700B7006E /* FirebaseDatabase */; };
+		8E3C8CF32A1D981B00B7006E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C8CF22A1D981B00B7006E /* API.swift */; };
+		8E3C8CF52A1D987400B7006E /* MapViewBueno2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C8CF42A1D987400B7006E /* MapViewBueno2.swift */; };
+		8E3C8CF72A1D98EA00B7006E /* BuscadorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C8CF62A1D98EA00B7006E /* BuscadorView.swift */; };
 		8E3EC98929FD81860086FFBA /* RegisterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC98829FD81860086FFBA /* RegisterEmailView.swift */; };
 		8E3EC98B29FD81A70086FFBA /* LoginEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC98A29FD81A70086FFBA /* LoginEmailView.swift */; };
 		8E3EC98D29FD81CE0086FFBA /* DismissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EC98C29FD81CE0086FFBA /* DismissView.swift */; };
@@ -72,6 +75,9 @@
 		71FC103A29FE092400DDF9C2 /* DataPersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistance.swift; sourceTree = "<group>"; };
 		71FC103C29FEE3AD00DDF9C2 /* MapViewBueno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewBueno.swift; sourceTree = "<group>"; };
 		71FC103E29FF146A00DDF9C2 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		8E3C8CF22A1D981B00B7006E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		8E3C8CF42A1D987400B7006E /* MapViewBueno2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewBueno2.swift; sourceTree = "<group>"; };
+		8E3C8CF62A1D98EA00B7006E /* BuscadorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscadorView.swift; sourceTree = "<group>"; };
 		8E3EC98829FD81860086FFBA /* RegisterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailView.swift; sourceTree = "<group>"; };
 		8E3EC98A29FD81A70086FFBA /* LoginEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailView.swift; sourceTree = "<group>"; };
 		8E3EC98C29FD81CE0086FFBA /* DismissView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissView.swift; sourceTree = "<group>"; };
@@ -155,6 +161,9 @@
 				71FC103829FE04DA00DDF9C2 /* ZonasModel.swift */,
 				71FC103C29FEE3AD00DDF9C2 /* MapViewBueno.swift */,
 				71FC103E29FF146A00DDF9C2 /* LocationView.swift */,
+				8E3C8CF22A1D981B00B7006E /* API.swift */,
+				8E3C8CF42A1D987400B7006E /* MapViewBueno2.swift */,
+				8E3C8CF62A1D98EA00B7006E /* BuscadorView.swift */,
 			);
 			path = App_H;
 			sourceTree = "<group>";
@@ -334,11 +343,13 @@
 				8E3EC98929FD81860086FFBA /* RegisterEmailView.swift in Sources */,
 				8E3EC99E29FD8D200086FFBA /* AuthenticationFirebaseDatasource.swift in Sources */,
 				8E3EC98D29FD81CE0086FFBA /* DismissView.swift in Sources */,
+				8E3C8CF72A1D98EA00B7006E /* BuscadorView.swift in Sources */,
 				71FC103929FE04DA00DDF9C2 /* ZonasModel.swift in Sources */,
 				FE51821A29FDA82F00EB99C2 /* LocationManager.swift in Sources */,
 				71FC103729FDF49700DDF9C2 /* ZonasView.swift in Sources */,
 				71FC103F29FF146A00DDF9C2 /* LocationView.swift in Sources */,
 				71FC103529FDE61200DDF9C2 /* PerfilView.swift in Sources */,
+				8E3C8CF52A1D987400B7006E /* MapViewBueno2.swift in Sources */,
 				71FC103129FD99CD00DDF9C2 /* newPass.swift in Sources */,
 				71FC100729FD789100DDF9C2 /* AuthenticationView.swift in Sources */,
 				8E3EC9A229FD8ECC0086FFBA /* AuthenticationViewModel.swift in Sources */,
@@ -347,6 +358,7 @@
 				71FC103329FD9E0D00DDF9C2 /* MapView.swift in Sources */,
 				8E3EC98B29FD81A70086FFBA /* LoginEmailView.swift in Sources */,
 				8E3EC9A029FD8E6D0086FFBA /* AuthenticationRepository.swift in Sources */,
+				8E3C8CF32A1D981B00B7006E /* API.swift in Sources */,
 				71FC103D29FEE3AD00DDF9C2 /* MapViewBueno.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
